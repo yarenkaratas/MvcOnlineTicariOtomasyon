@@ -1,0 +1,55 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Siniflar.Class4
+
+@{
+    ViewBag.Title = "Dinamik";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<br />
+
+<div class="panel panel-default">
+
+    <div class="panel-heading">
+
+        <div class="row">
+
+            <h2 class="panel-title pull-left" style="margin-left:10px;">
+
+                <strong>Order Details</strong>
+
+            </h2>
+
+            <button style="margin-right:10px" class="btn btn-primary pull-right" onclick="addNewOrder()">New Order</button>
+
+        </div>
+
+    </div>
+    @*Fatura Listesi*@
+
+        @foreach (var item in Model.deger1)
+
+        {
+
+            <div class="panel-body">
+
+                <table class="table table-striped table-responsive">
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>Seri - SıraNo : @item.FaturaSeriNo - @item.FaturaSıraNo </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        }   
+
+</div>
+
